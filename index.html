@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- google-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-IIED/eyOkM6ihtOiQsX2zizxFBphgnv1zbe1bKA+njdFzkr6cDNy16jfIKWu4FNH" crossorigin="anonymous">
+    <script>
+      $('body').scrollspy({ target: '#list-example' }); 
+      $('[data-spy="scroll"]').each(function () {
+      var $spy = $(this).scrollspy('refresh')
+      });
+    </script>
+        <!-- Script Boostrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+        <style>
+          /********* GENERAL*********/
+@font-face {
+    font-family: "Pulso-Regular";
+    src: url(./fonts/Pulso-Regular.otf);
+}
+@font-face {
+    font-family: "Pulso-Light";
+    src: url(./fonts/Pulso-Light.otf);
+}
+body{
+    position: relative;
+    color: white;
+    height: 100vh;
+    font-family: "Pulso-Light";
+    font-size: 1rem !important;
+}
+#pageLandingDinamic section{
+  padding: 0;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+section{
+  scroll-snap-align: start;
+}
+.carousel-inner{
+  padding-top: 70px;
+}
+.padding-top-carousel-off{
+  padding-top: 0;
+}
+/*fuente*/
+#pageLandingDinamic{
+    background-color: #251958 !important;
+    background: linear-gradient(to right, #090325,20%, #251958);
+}
+
+p, label {
+    color: white;
+    font-family: "Pulso-Light",Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.color-black{
+    color: black;
+}
+
+.font-roboto{
+    font-family: 'Roboto', sans-serif;
+}
+
+.roboto-wdt-300-light{
+    font-weight: 300;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: white !important;
+    font-family: "Pulso-Regular", Arial, Helvetica, sans-serif !important;
+}
+h3{
+    font-size: 38px;   
+}
+@media (max-width: 991.98px) { 
+    h3{
+        font-size: 35px !important;
+    }
+ }
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    h3{
+        font-size: 30px !important;
+    }
+ }
+
+h2{
+ font-size: 85px;
+}
+/* Medium devices (tablets, less than 992px)*/
+@media (max-width: 767.98px) { 
+    h2{
+        font-size: 60px;
+    }
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    h2{
+        font-size: 40px;
+    }
+ }
+
+
+ .text-acento{
+    color: #b989fa !important;
+    font-size: 22px !important;
+ }
+
+ /* Medium devices (tablets, less than 992px)*/
+@media (max-width: 767.98px) { 
+    .text-acento.acento-col-4-1{
+    font-size: 18px !important;
+}
+}
+
+.font-light{
+    font-family:"Pulso-Light", Arial light;
+}
+
+/*Margenes padding */
+.pt-pb-7{
+    padding-top:7.5rem;
+    padding-bottom: 7.5rem;
+}
+.pt-pb-9{
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+}
+.pt-pb-5{
+    padding-top: 5rem;
+    padding-top: 5rem;
+}
+
+/* COLORES: fondo */
+.bgc-purpura{
+    background-color: #251958 !important;
+    background: linear-gradient(to right, #090325,20%, #251958);
+}
+.color-acento{
+    color: #b989fa;
+}
+
+/* fondo animado */
+canvas {
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+    top:0;
+	left: 0;
+    z-index:1000; 
+}
+
+
+/* z-index  */
+.z-index-1000{
+    z-index: 1000;
+}
+
+.z-index-1001{
+    z-index: 1001;
+}
+
+.z-index-1002{
+    z-index: 1002;
+}
+
+.z-index-1003{
+    z-index: 1003;
+}
+
+.z-index-1004{
+    z-index: 1004;
+}
+
+
+/* Position */
+.p-relative{
+    position: relative;
+}
+.p-absolute{
+    position: absolute;
+}
+
+/*menu flotante*/
+.menu-flotante{
+    position: fixed;
+    right: 0;
+    top: 96px;
+    text-align:right;
+    font-family:"Pulso-Light";
+    line-height: 15px !important;
+    font-size: 15px !important;
+    padding: 10px;
+}
+
+.menu-flotante-img .img-hidden {
+    display: inline;
+}
+    
+.menu-flotante-img:hover .img-hidden {
+    display: none;
+}
+    
+.menu-flotante-img .img-hidden-hover {
+    display: none;
+}
+    
+.menu-flotante-img:hover  .img-hidden-hover{
+    display: inline;
+}    
+
+.menu-flotante-img .img-hidden-hover {
+    display: none;
+}
+
+.menu-flotante-img.active .img-hidden-hover {
+    display: inline;
+}
+
+.menu-flotante-img.active .img-hidden {
+    display: none;
+}
+
+.menu-flotante a{
+    color: white;
+    opacity: 60%;
+    width:230px !important ;
+}
+ 
+.menu-flotante .list-group-item{
+    background-color: transparent;
+    border: transparent;
+    padding: 0 1.5rem;
+}
+.menu-flotante .list-group-item .img-size{
+    width: 11px !important;
+}
+
+.menu-flotante .list-group-item .img-size.pb-04{
+    padding-bottom: .4rem !important;
+}
+
+.list-group-item.active{
+    background-color: transparent;
+    color: white;
+    opacity: 100%;
+}
+
+.list-group-item-action:focus, .list-group-item-action:hover{
+    background-color: transparent;
+    color: white;
+    opacity: 100%;
+}
+
+.pb-02{
+    padding-bottom: .2rem !important;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 991.98px) { 
+    .menu-flotante{
+        display: none;
+    }
+ }
+
+/* botones card */
+.btn-design{
+    border: 1px solid #b989fa;
+    color: #b989fa;
+    padding:7px 25px;
+    font-size: 15px !important;
+}
+.btn-design:hover{
+    color:white;
+    border: 1px solid white;
+}    
+
+.contenedor-scroll{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+/********* SECCION 1 *********/
+.seccion-1{
+    position: relative;
+}
+
+.height-responsive{
+    display:flex !important;
+    height: 100vh;
+}
+.height-responsive img {
+    object-fit: cover;
+} 
+
+
+/********* SECCION 2 *********/
+
+.seccion-2{
+    position: relative !important;
+}
+.seccion-text-center{
+    top: 50%;
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+    .section-2-margin{
+        margin-left:10px;
+    } 
+    
+ }
+
+/********* SECCION 3*********/
+/* Carousel*/
+.seccion-3{
+    position: relative;
+}
+.carousel-caption-static{
+    position:static;
+    text-align: center;
+}
+.width-850{
+    max-width: 850px;
+    margin: auto;
+    padding: 1rem;
+}
+.padding-text{
+    padding-top:0 !important;
+    margin-top:-48px !important;
+}
+
+.image-seccion3-hover:hover{
+    opacity: 0.8;
+}
+/* Modales */
+@media (min-width: 1200px){
+.modal-xl {
+    max-width: 800px;
+    margin:auto ;
+}
+}
+
+/********* SECCION 4 *********/
+/* Contacto*/
+div a.ui-link {
+    font-size: 30px;
+    color: white!important;
+}
+
+.items-ul{
+list-style: none;
+}
+.seccion-4{
+    position: relative;
+}
+
+        </style>
+    <title>Document</title>
+</head>
+<body>
+  <div data-spy="scroll" data-target="#list-example" class="bgc-purpura" id="pageLandingDinamic">     
+    <div id="list-example" class="list-group menu-flotante z-index-1003">
+      <a class="list-group-item list-group-item-action text-right menu-flotante-img" href="#list-item-1" style="display: none;">Bienvenida
+        <img class="pb-02 img-hidden-hover" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-1-hover" alt="imagen menu flotante">
+        <img class="pb-02 img-hidden" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-1" alt=" imagen menu flotante">
+      </a>  
+      <a class="list-group-item list-group-item-action text-right menu-flotante-img" href="#list-item-2">Nosotros 
+        <img class="pb-02  img-hidden-hover" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-2-hover" alt=""> 
+        <img class="pb-02 img-hidden" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-2" alt="imagen menu flotante">
+      </a>
+      <a class="list-group-item list-group-item-action text-right menu-flotante-img" href="#list-item-3">Soluciones Tecnológicas 
+        <img class="pb-02  img-hidden-hover" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-2-hover" alt=""> 
+        <img class="pb-02 img-hidden" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-2" alt="imagen menu flotante"></a>
+      <a class="list-group-item list-group-item-action text-right menu-flotante-img" href="#list-item-4">Casos de Éxito 
+        <img class="pb-02 img-hidden-hover" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-2-hover" alt="hover imagen menu flotante"> 
+        <img class="pb-02 img-hidden" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-2" alt=""></a>
+      <a class="list-group-item list-group-item-action text-right menu-flotante-img" href="#list-item-5">Contacto 
+        <img class="pb-02  img-hidden-hover" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-3-hover" alt=" imagen menu flotante"> 
+        <img class="pb-02 img-hidden" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-3" alt="imagen menu flotante"></a>
+    </div>
+    <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example contenedor-scroll">
+      <section id="list-item-1" class="seccion-1">
+        <canvas id="particles" class="z-index-1000"  height="2000"></canvas>
+        <div>
+          <div class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner padding-top-carousel-off">
+              <div class="carousel-item active height-responsive">
+                <img src="https://www.telecom.com.ar/files/land_inst_section-1-muchacho-notebook" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-md-block seccion-text-center">
+                  <h2>Tecnología <span class="font-light">que se vive<span></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="list-item-2" class="seccion-1">
+        <div style="position: absolute; left: 0; right: 0;">
+             <div class="height-responsive"> 
+              <video autoplay loop  muted src="./videos/manifiesto.mp4" class="d-block" alt="video manifiesto" style="width: 100%; object-fit: cover;">
+            </div>
+        </div>
+          <div id="carouselsection-1" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="false">
+            <canvas id="canvas" class="z-index-1000"></canvas>
+            <ol class="carousel-indicators z-index-1001">
+              <li data-target="#carouselsection-1" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselsection-1" data-slide-to="1"></li>
+              <li data-target="#carouselsection-1" data-slide-to="2"></li>
+              <li data-target="#carouselsection-1" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+              <div class="height-responsive w-100"></div> 
+                <div class="carousel-caption seccion-text-center width-850 padding-text">
+                  <h3 class="z-index-1001 p-relative"><span class="font-light">En cada avance tecnológico,</span> encontramos a las personas.</h3>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="height-responsive w-100"></div> 
+                <div class="carousel-caption seccion-text-center width-850 padding-text">
+                  <h3 class="z-index-1001 p-relative"><span class="font-light">La tecnología transforma los negocios, impulsa a las personas para</span> alcanzar nuevas metas.</h3>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="height-responsive w-100"></div> 
+                <div class="carousel-caption seccion-text-center width-850 padding-text">
+                  <h3 class="z-index-1001 p-relative"><span class="font-light">Es una</span> parte fundamental <span class="font-light">en todo lo que hacemos.</span></h3>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="height-responsive w-100 "></div> 
+                <div class="carousel-caption seccion-text-center width-850 padding-text">
+                  <h3 class="z-index-1001 p-relative"><span class="font-light">La tecnología te potencia a vos, y a tu empresa</span> para lograr mejores resultados.</h3>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev z-index-1001" href="#carouselsection-1" role="button" data-slide="prev">
+              <span aria-hidden="true">
+                <img src="https://www.telecom.com.ar/files/land_inst_arrow-_left" alt=" arrow left">
+              </span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next z-index-1001" href="#carouselsection-1" role="button" data-slide="next">
+              <span  aria-hidden="true">
+                <img src="https://www.telecom.com.ar/files/land_inst_arrow-_right" alt="arrow right">
+              </span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+      </section>
+      <section id="list-item-3" class="seccion-2">
+        <div class="container">
+              <div style="position: sticky; top:0; " >
+                <img src="https://www.telecom.com.ar/files/land_inst_semicirculo" alt="" class="img-fluid">
+              </div>
+                <div class="row align-items-center pt-pb-9">
+                    <div class="col-md-6 col-lg-6 offset-lg-1 order-md-2">
+                      <video src="./videos/cloud e-commerce.mp4" controls class="img-fluid z-index-1002 p-relative" alt="">
+                    </div> 
+                    <div class="col-md-6 col-lg-4 offset-lg-1 order-md-1">
+                      <h3 class="mb-4 mt-4 section-2-margin">Cloud & Datacenter</h3>
+                      <p class="card-text text-acento acento-col-4-1 font-light section-2-margin">Tecnología pensada para que no pierdas nada si volcás el café sobre el teclado.</p>
+                      <p class="card-text section-2-margin seccion-2-text">Soluciones de nube pública, privada, híbrida y datacenter.</p>
+                      <a href="https://www.telecom.com.ar/cloud" target="_blank"><button type="button" class="section-2-margin btn btn-design z-index-1002 p-relative"> Conocé más</button></a>
+                    </div>
+                </div> 
+                <div class="row align-items-center pt-pb-9">
+                  <canvas id="canvas-section-2" class="z-index-1000"></canvas>
+                    <div class="col-md-6 col-lg-6 offset-lg-1">
+                      <video src="./videos/ciberseguridad.mp4" controls class="img-fluid z-index-1002 p-relative" alt="">
+                    </div> 
+                    <div class="col-md-6 col-lg-4 offset-lg-1 p-">
+                      <h3 class="mb-4 mt-4 section-2-margin">Ciberseguridad</h3>
+                      <p class=" section-2-margin card-text text-acento acento-col-4-1 font-light">Tecnología pensada por si hay que prestar la laptop laboral para hacer la tarea del colegio.</p>
+                      <p class=" section-2-margin card-text seccion-2-text">Soluciones que protegen tus datos para tranquilidad tu empresa.</p>
+                      <a href="https://www.telecom.com.ar/ciberseguridad" target="_blank"><button type="button" class="section-2-margin btn btn-design z-index-1002 p-relative">Conocé más</button></a> 
+                    </div>
+                </div>
+                <div class="row align-items-center pt-pb-9">
+                    <div class="col-md-6 col-lg-6 offset-lg-1 order-md-2">
+                        <video controls src="./videos/IOT.mp4" class="img-fluid z-index-1002 p-relative" alt="">
+                        </div> 
+                    <div class="col-md-6 col-lg-4 offset-lg-1 order-md-1">
+                        <h3 class="mb-4 mt-4 section-2-margin">IoT</h3>
+                            <p class="card-text text-acento acento-col-4-1 font-light section-2-margin ">Tecnología pensada para los que sienten a cada producto como un hijo y necesitan saber qué le pasa en cada momento.</p>
+                            <p class="card-text section-2-margin seccion-2-text">Soluciones para optimizar los datos, potenciar y hacer más con tu negocio. .</p>
+                          <a href="https://www.telecom.com.ar/iot" target="_blank"><button type="button" class="btn btn-design z-index-1002 p-relative section-2-margin">Conocé más</button></a>   
+                    </div>
+                </div> 
+                <div class="row align-items-center pt-pb-9">
+                    <div class="col-md-6 col-lg-6 offset-lg-1">
+                        <video controls src="./videos/conectividad.mp4" class="img-fluid z-index-1002 p-relative" alt="">
+                      </div> 
+                      <div class="col-md-6 col-lg-4 offset-lg-1">
+                        <h3 class="mb-4 mt-4 section-2-margin">Conectividad</h3>
+                        <p class="card-text text-acento acento-col-4-1 font-light section-2-margin">Tecnología pensada por si tu socio se enamoró y se fue a vivir a otra ciudad.   
+                        </p>
+                        <p class="card-text section-2-margin seccion-2-text">Soluciones para la conectividad y el trabajo colaborativo de tu empresa.
+                        </p>
+                        <a href="https://www.telecom.com.ar/pymes/productos/conectividad/?idf=1" target="_blank">
+                          <button type="button" class="btn btn-design z-index-1002 p-relative section-2-margin">Conocé más</button>
+                        </a> 
+                    </div>
+                </div>
+        </div>           
+      </section>
+      <section id="list-item-4" class="pt-pb-9 seccion-3 mt-4">
+       <canvas id="canvas-section-3" class="z-index-1000"></canvas>         
+        <div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel">
+            <ol class="carousel-indicators z-index-1003">
+              <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active "></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="1" ></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="2" ></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="3" ></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="4" ></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="5" ></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-caption d-md-block width-850 carousel-caption-static">
+                        <h3 class="mb-4">Caso de éxito<span class="font-light"> Megatlon</span></h3>
+                        <p class="font-roboto roboto-wdt-300-light z-index-1002 p-relative d-inline">Afianzando nuestras relaciones como partner estratégicos, Megatlon, el mayor referente de la actividad física en Argentina, eligió a Telecom para instalar en sus sedes la nueva solución de seguridad de Control de Acceso a través de reconocimiento facial. </p> <div class="z-index-1002 p-relative d-inline color-acento cursor-pointer" data-toggle="modal" data-target=".bd-megatlon-modal-xl">(Ver más)</div>
+                    </div>
+                    <div class="p-relative m-auto w-100">
+                    <img  src="https://www.telecom.com.ar/files/land_inst_megatlon-img-seccion-3" class="img-fluid d-block m-auto z-index-1002 p-relative cursor-pointer image-seccion3-hover" alt="banner caso Megatlon" data-toggle="modal" data-target=".bd-megatlon-modal-xl">
+                  </div>
+                </div>
+              <!-- Empieza el modal -->
+              <div id="myModal" class="modal fade bd-megatlon-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title color-black" id="exampleModalCenterTitle">Megatlon</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p class="font-roboto roboto-wdt-300-light color-black z-index-1003">Afianzando nuestras relaciones como partner estratégicos, Megatlon, el mayor referente de la actividad física en Argentina, eligió a Telecom para instalar en sus sedes la nueva solución de seguridad de Control de Acceso a través de reconocimiento facial.</p>
+                        <iframe class="z-index-1003" width="100%" height="315" src="https://www.youtube.com/embed/ZuE4KjiuhH0?enablejsapi=1&amp;origin=https%3A%2F%2Fwww.telecom.com.ar" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-gtm-yt-inspected-2197465_382="true" id="709354217" data-gtm-yt-inspected-41="true"></iframe>
+                      </div>
+                  </div>
+                </div>
+              </div>
+                <!-- Fin del  modal -->
+              <div class="carousel-item">
+                <div class="carousel-caption width-850 carousel-caption-static">
+                  <h3 class="mb-4">Caso de éxito <span class="font-light">Calipso ERP de Grupo Visma</span></h3>
+                  <p class="font-roboto roboto-wdt-300-light z-index-1002 p-relative d-inline">En Telecom seguimos trabajando para potenciar empresas, por eso agradecemos a Calipso ERP de Grupo Visma por confiar en nosotros como su partner tecnológico, adquiriendo el servicio de Huawei Cloud, una nube inteligente para empresas. Estamos...</p> <div class="z-index-1002 p-relative d-inline color-acento cursor-pointer" data-toggle="modal" data-target=".bd-calipso-modal-xl">(Ver más)</div>                                
+                </div>
+                <div>
+                  <img src="https://www.telecom.com.ar/files/land_inst_calipso-img-seccion-3" class="img-fluid d-block m-auto z-index-1002 p-relative cursor-pointer image-seccion3-hover" alt="..." data-toggle="modal" data-target=".bd-calipso-modal-xl">
+                </div>
+              </div>
+              <!-- Empieza el modal -->
+              <div id="myModal2" class="modal fade bd-calipso-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title color-black" id="exampleModalCenterTitle">Calipso ERP de Grupo Visma</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p class="font-roboto roboto-wdt-300-light color-black">En Telecom seguimos trabajando para potenciar empresas, por eso agradecemos a Calipso ERP de Grupo Visma por confiar en nosotros como su partner tecnológico, adquiriendo el servicio de Huawei Cloud, una nube inteligente para empresas. Estamos orgullosos de poder acompañar a las empresas en su transformación digital, asegurando la seguridad de su información y brindándoles el respaldo que necesitan.</p>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/ZuE4KjiuhH0?enablejsapi=1&amp;origin=https%3A%2F%2Fwww.telecom.com.ar" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-gtm-yt-inspected-2197465_382="true" id="709354217" data-gtm-yt-inspected-41="true"></iframe>
+                      </div>
+                  </div>
+                </div>
+              </div>
+                <!-- Fin del  modal -->             
+              <div class="carousel-item">
+                <div class="carousel-caption width-850 carousel-caption-static">
+                  <h3 class="mb-4">Caso de éxito <span class="font-light">Frávega</span></h3>
+                  <p class="font-roboto roboto-wdt-300-light z-index-1002 p-relative d-inline">Agradecemos a Frávega por elegirnos para ayudarlos en el crecimiento de su canal de ventas digital para seguir siendo uno de los Marketplace referentes del mercado. Para ello, a partir de la alianza entre Telecom y Amazon Web Service, adquirió la...</p>
+                  <div class="z-index-1002 p-relative d-inline-block color-acento cursor-pointer mb-1" data-toggle="modal" data-target=".bd-fravega-modal-xl">(Ver más)</div>
+                </div>                
+                <img src="https://www.telecom.com.ar/files/land_inst_fravega-img-seccion-3" class="img-fluid d-block m-auto z-index-1002 p-relative cursor-pointer image-seccion3-hover" alt="..." data-toggle="modal" data-target=".bd-fravega-modal-xl">
+              </div>
+              <!-- Empieza el modal -->
+              <div id="myModal3" class="modal fade bd-fravega-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title color-black" id="exampleModalCenterTitle">Frávega</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p class="font-roboto roboto-wdt-300-light color-black">Agradecemos a Frávega por elegirnos para ayudarlos en el crecimiento de su canal de ventas digital para seguir siendo uno de los Marketplace referentes del mercado. Para ello, a partir de la alianza entre Telecom y Amazon Web Service, adquirió la Solución de Nube de AWS.</p>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/3bSnukti-Ss?enablejsapi=1&amp;origin=https%3A%2F%2Fwww.telecom.com.ar" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-gtm-yt-inspected-2197465_382="true" id="709354217" data-gtm-yt-inspected-41="true"></iframe>
+                      </div> 
+                  </div>
+                </div>
+              </div>
+                <!-- Fin del  modal -->              
+              <div class="carousel-item">
+                <div class="carousel-caption width-850 carousel-caption-static">
+                  <h3 class="mb-4">Caso de éxito <span class="font-light">Café Martínez</span></h3>
+                  <p class="font-roboto roboto-wdt-300-light z-index-1002 p-relative d-inline">¡Seguimos potenciando la transformación digital de las empresas! Esta vez de la mano de Café Martínez, que eligió a Telecom para ampliar la conectividad de su negocio, adquiriendo nuestro servicio de internet WIFI6 – HFC, que les proporciona una...</p>
+                  <div class="z-index-1002 p-relative d-inline color-acento cursor-pointer" data-toggle="modal" data-target=".bd-cafe-martinez-modal-xl">(Ver más)</div>
+                </div>
+                <div style="margin:auto; width: 100%;">
+                  <img src="https://www.telecom.com.ar/files/land_inst_cafe-martinez-img-seccion-3" class="img-fluid d-block m-auto z-index-1002 p-relative cursor-pointer image-seccion3-hover" alt="..." data-toggle="modal" data-target=".bd-cafe-martinez-modal-xl">
+                </div>  
+              </div>
+              <!-- Empieza el modal -->
+              <div id="myModal4"  class="modal fade bd-cafe-martinez-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title color-black" id="exampleModalCenterTitle">Café Martínez</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p class="font-roboto roboto-wdt-300-light color-black">¡Seguimos potenciando la transformación digital de las empresas! Esta vez de la mano de Café Martínez, que eligió a Telecom para ampliar la conectividad de su negocio, adquiriendo nuestro servicio de internet WIFI6 – HFC, que les proporciona una mejor calidad de conexión para sus sucursales. Con esta solución, Café Martínez logró transformar sus locales en centros de coworking, brindando a sus clientes un espacio ideal para trabajar con un WIFI de alta velocidad, mientras viven la mejor experiencia en Café. Gracias por elegirnos como su partner tecnológico.</p>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/K1eqDzI_4fQ?enablejsapi=1&amp;origin=https%3A%2F%2Fwww.telecom.com.ar" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-gtm-yt-inspected-2197465_382="true" id="709354217" data-gtm-yt-inspected-41="true"></iframe>
+                      </div>
+                  </div>
+                </div>
+              </div>
+                <!-- Fin del  modal -->              
+              <div class="carousel-item">
+                <div class="carousel-caption width-850 carousel-caption-static">
+                  <h3 class="mb-4">Caso de éxito <span class="font-light">Ecosan S.A.</span></h3>
+                  <p class="font-roboto roboto-wdt-300-light z-index-1002 p-relative d-inline">Ecosan S.A nos eligió como su partner tecnológico para potenciar y acelerar el proceso de transformación digital de su negocio. Con la solución de Monitoreo de Activos, mediante dispositivos y sensores de variables críticas, pueden controlar el correcto...</p><div class="z-index-1002 p-relative d-inline color-acento cursor-pointer" data-toggle="modal" data-target=".bd-ecosan-modal-xl">(Ver más)</div>
+                </div>
+                <img src="https://www.telecom.com.ar/files/land_inst_ecosan-img-seccion-3" class="img-fluid d-block m-auto z-index-1002 p-relative cursor-pointer image-seccion3-hover"  data-toggle="modal" data-target=".bd-ecosan-modal-xl" alt="...">
+              </div>
+              <!-- Empieza el modal -->
+              <div id="myModal5" class="modal fade bd-ecosan-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title color-black" id="exampleModalCenterTitle">Ecosan S.A.</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p class="font-roboto roboto-wdt-300-light color-black">Ecosan S.A nos eligió como su partner tecnológico para potenciar y acelerar el proceso de transformación digital de su negocio. Con la solución de Monitoreo de Activos, mediante dispositivos y sensores de variables críticas, pueden controlar el correcto traslado y manipulación de sus activos, favoreciendo así su cuidado. Permitiendo una logística más cercana, con mayor seguridad y mayor eficiencia. Además, les permite conocer en tiempo real su ubicación, definir zonas seguras y habilitar alertas inmediatas para un mejor seguimiento. Continuamos trabajando para potenciar la transformación digital de las empresas.</p>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/91ahpcqYy_A?enablejsapi=1&amp;origin=https%3A%2F%2Fwww.telecom.com.ar" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-gtm-yt-inspected-2197465_382="true" id="709354217" data-gtm-yt-inspected-41="true"></iframe>
+                      </div>
+                  </div>
+                </div>
+              </div>
+                <!-- Fin del  modal -->                
+              <div class="carousel-item">
+                <div class="carousel-caption d-md-block width-850 carousel-caption-static">
+                  <h3 class="mb-4">Caso de éxito <span class="font-light">Gamergy</span></h3>
+                  <p class="font-roboto roboto-wdt-300-light z-index-1002 p-relative d-inline">Para nosotros es un orgullo estar presentes y potenciar uno de los eventos más importantes del mundo. Es por esto que agradecemos a GGTech Entertaiment por confiar en nosotros y permitirnos ser parte del festival Gamergy en Buenos Aires, uno de los más...</p>
+                  <div class="z-index-1002 p-relative d-inline color-acento cursor-pointer" data-toggle="modal" data-target=".bd-gamergy-modal-xl">(Ver más)</div>
+                </div>
+                <img src="https://www.telecom.com.ar/files/land_inst_gamergy-img-seccion-3" class="img-fluid d-block m-auto z-index-1002 p-relative cursor-pointer image-seccion3-hover" data-toggle="modal" data-target=".bd-gamergy-modal-xl" alt="...">
+              </div>
+              <!-- Empieza el modal -->
+              <div id="myModal6" class="modal fade bd-gamergy-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title color-black" id="exampleModalCenterTitle">Gamergy</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p class="font-roboto roboto-wdt-300-light color-black z-index-1003">Para nosotros es un orgullo estar presentes y potenciar uno de los eventos más importantes del mundo. Es por esto que agradecemos a GGTech Entertaiment por confiar en nosotros y permitirnos ser parte del festival Gamergy en Buenos Aires, uno de los más importantes en la industria de E-Sports y Gaming. Les proporcionamos no solo una red de banda ancha de 7.5 Gigas que logró una conectividad exitosa durante los 3 días del evento, sino también transmitimos en vivo a través de flow a cada rincón del país. Gracias GGTech Entertaiment por confiar en Telecom como su partner tecnológico.</p>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/MYsEpyUkoMk?enablejsapi=1&amp;origin=https%3A%2F%2Fwww.telecom.com.ar" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-gtm-yt-inspected-2197465_382="true" id="709354217" data-gtm-yt-inspected-41="true"></iframe>
+                      </div>
+                  </div>
+                </div>
+              </div>
+                <!-- Fin del  modal -->              
+            </div>
+            <a class="carousel-control-prev z-index-1002" href="#carouselExampleCaptions" role="button" data-slide="prev">
+              <span  aria-hidden="true">
+                <img src="https://www.telecom.com.ar/files/land_inst_arrow-_left" alt="">
+              </span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next z-index-1002" href="#carouselExampleCaptions" role="button" data-slide="next">
+              <span  aria-hidden="true">
+                <img src="https://www.telecom.com.ar/files/land_inst_arrow-_right" alt="">
+              </span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+      </section>
+      <section id="list-item-5" class="pt-pb-5 pt-5 pb-5 seccion-4">
+          <div class="container">
+            <div class="row align-items-center pb-10">
+              <div class="col-md-12 col-lg-4 offset-lg-1">
+              <div class="text-left">
+                  <div>
+                      <h5 class="color-acento mb-3">Canales digitales de atención para clientes corporativos
+                      </h5>
+                      <p class=" mb-3">En Telecom estamos constantemente innovando y simplificando al máximo la interacción con nuestros clientes.</p><p>La necesidad de asesoramiento requiere cada vez mayor agilidad y rapidez en la respuesta, por eso desarrollamos una atención digital omnicanal para cumplir con las expectativas y necesidades de atención.
+                      </p>
+                      <div class="row flex-wrap align-items-center justify-content-around"> 
+                      <div class="m-1 text-center">
+                            <a href="https://api.whatsapp.com/send?phone=5491131002222&amp;text=Hola!%20%F0%9F%91%8B%20Quisiera%20realizar%20una%20consulta!%20" target="_blank" rel="external" class="ui-link">
+                                <i class="fab fa-whatsapp"></i>
+                            </a><br>
+                            <p class="text-center mb-1"><b class="color-acento">WhatsApp</b><br>
+                            1131002222</p>
+                      </div>
+                        <!--<div class="m-1 text-center">
+                            <a href="https://twitter.com/telecomempresas" target="_blank" rel="external" class="ui-link">
+                              <i class="fab fa-twitter"></i>
+                            </a><br>
+                            <p class="text-center mb-1"> <b class="color-acento">Twitter</b><br>
+                            @telecomempresas</p>
+                        </div>                      -->
+                        <div  class="m-1 text-center">
+                            <a class="ui-link">
+                              <i class="fas fa-comments blue"></i>
+                            </a><br>
+                            <p class="text-center mb-1"><b class="color-acento">Chat</b><br>
+                            @Telecom</p>                           
+                        </div> 
+                      </div>
+                      <h5 class="color-acento mb-3 mt-4">Ventas
+                      </h5>
+                      <p class=" mb-3">Para contratación o información de nuestros servicios, podés contactarte a través de los siguientes canales de lunes a viernes de 9 a 18hs.
+                      </p>
+                      <div>
+                    </div>
+                  </div>
+              </div>
+              </div>
+              <div class="pt-pb-9 col-md-12 col-lg-6 offset-lg-1">
+                <h3>Formulario de contacto</h3>
+                <p>Completá los siguientes datos y nos contactaremos con vos dentro de las próximas 24 horas.</p>
+                <p>* Todos los campos son obligatorios.</p>
+                <form>
+                    <div class="row">
+                      <div class="col">
+                        <label for="text">Nombre completo*</label>
+                        <input type="text" class="form-control" placeholder="Nombre completo">
+                      </div>
+                    </div>                
+                  <div class="form-group mt-4">
+                    <label for="email">Correo Electrónico*</label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                  </div>
+                  <div class="form-group mt-4">
+                    <label for="number">Teléfono*</label>
+                    <input type="number" class="form-control" id="number" placeholder="1120000000">
+                  </div>
+                  <div class="form-group">
+                    <label for="file">Adjuntar archivo (Máx. 2MB)*</label>
+                    <input type="file" class="form-control-file" id="file">
+                  </div>
+                  <div class="form-group">
+                    <label for="Textarea1">Comentario*</label>
+                    <textarea class="form-control" id="Textarea1" rows="3"></textarea>
+                  </div>
+                </form>
+              </div>     
+            </div>
+          </div> 
+      </section>
+    </div>
+  </div>  
+  <script>
+    // ANIMACIÓN PRIMERA SECCIÓN CAMIÓN
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    const mouse = { x: 0, y: 0, radius: 70 };
+    let elapsedTime = 0;
+    let w = (canvas.width = innerWidth);
+    let h = (canvas.height = innerHeight);
+    const length = 120;
+    const speeds = [...Array(length)].map(() => Math.random() * (5 - 1) + 1);
+    const offsets = [...Array(length)].map(() => Math.random() * length - length);
+    const lastPos = [...Array(length)].map(() => Math.random() * w);
+
+    window.addEventListener("resize", () => {
+      w = canvas.width = innerWidth;
+      h = canvas.height = innerHeight;
+    });
+
+    canvas.addEventListener("mousemove", (e) => {
+      mouse.x = e.offsetX;
+      mouse.y = e.offsetY;
+    });
+
+    function draw() {
+      // Cursor
+      ctx.lineWidth = 1;
+      ctx.strokeStyle = "transparent";
+      ctx.beginPath();
+      ctx.arc(mouse.x, mouse.y, mouse.radius / 2, 0, Math.PI * 2);
+      ctx.closePath();
+      ctx.stroke();
+
+	// Particles
+	for (let i = 0; i < length; i++) {
+		let x = lastPos[i] > w ? 0 : lastPos[i];
+		let y = h / 3 - offsets[i] + Math.cos(x * -0.001) * ((h + offsets[i]) * -0.3);
+
+		const dx = mouse.x - x;
+		const dy = mouse.y - y;
+		const distance = Math.sqrt(dx * dx + dy * dy);
+		const forceDirectionX = dx / distance;
+		const forceDirectionY = dy / distance;
+		const maxDistance = mouse.radius;
+		const force = maxDistance - distance;
+		const directionX = forceDirectionX * force;
+		const directionY = forceDirectionY * force;
+
+		if (distance < mouse.radius) {
+			x -= directionX;
+			y -= directionY;
+		}
+		ctx.fillStyle = "rgba(0, 255, 255, 0.8)";
+		ctx.beginPath();
+		ctx.arc(x, y, speeds[i], 0, Math.PI * 2);
+		ctx.closePath();
+		ctx.fill();
+
+		lastPos[i] = x + speeds[i];
+	}
+}
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      draw();
+
+      requestAnimationFrame(animate);
+      elapsedTime++;
+    }
+
+    animate();
+
+    // ANIMACIÓN PRIMERA SECCIÓN
+    const particles = document.getElementById("particles");
+    const ctxx = particles.getContext("2d");
+    particles.width = window.innerWidth;
+    particles.height = window.innerHeight;
+
+    const particlesArray = [];
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * particles.width;
+        this.y = Math.random() * particles.height;
+        this.size = Math.random() * 5 + 1;
+        this.speedX = Math.random() * 3 - 1.5;
+        this.speedY = Math.random() * 3 - 1.5;
+        this.color = `rgba(0, 255, 255, 0.8)`;
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        if (this.size > 0.2) this.size -= 0.1;
+        if (this.x < 0 || this.x > particles.width) this.speedX *= -1;
+        if (this.y < 0 || this.y > particles.height) this.speedY *= -1;
+      }
+
+      draw() {
+        ctxx.fillStyle = this.color;
+        ctxx.beginPath();
+        ctxx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctxx.closePath();
+        ctxx.fill();
+      }
+    }
+
+    function handleParticles() {
+      for (let i = 0; i < particlesArray.length; i++) {
+        particlesArray[i].update();
+        particlesArray[i].draw();
+
+        if (particlesArray[i].size <= 0.2) {
+          particlesArray.splice(i, 1);
+          i--;
+        }
+      }
+    }
+
+    function createParticles() {
+      if (particlesArray.length < 100) {
+        particlesArray.push(new Particle());
+      }
+    }
+
+    function animateParticles() {
+      ctxx.clearRect(0, 0, particles.width, particles.height);
+      handleParticles();
+      createParticles();
+      requestAnimationFrame(animateParticles);
+    }
+
+    animateParticles();
+
+    window.addEventListener("resize", () => {
+      particles.width = window.innerWidth;
+      particles.height = window.innerHeight;
+    });
+
+    // ANIMACIÓN SEGUNDA SECCIÓN 
+      const canvassection = document.getElementById("canvas-section-2");
+      const ctxxx = canvassection.getContext("2d");
+      const mousee = { x: 0, y: 0, radius: 70 };
+      let elapsedTimee = 0;
+      let ww = (canvassection.width = innerWidth);
+      let hh = (canvassection.height = innerHeight);
+      const lengthh = 90;
+      const speedss = [...Array(lengthh)].map(() => Math.random() * (5 - 1) + 1);
+      const offsetss = [...Array(lengthh)].map(() => Math.random() * lengthh - lengthh);
+      const lastPoss = [...Array(lengthh)].map(() => Math.random() * ww);
+  
+  window.addEventListener("resize", () => {
+    ww = canvassection.width = innerWidth;
+    hh = canvassection.height = innerHeight;
+  });
+  
+  canvassection.addEventListener("mousemove", (e) => {
+    mousee.x = e.offsetX;
+    mousee.y = e.offsetY;
+  });
+  
+  function draww() {
+    // Cursor
+    ctxxx.lineWidth = 1;
+    ctxxx.strokeStyle = "transparent";
+    ctxxx.beginPath();
+    ctxxx.arc(mousee.x, mousee.y, mousee.radius / 2, 0, Math.PI * 2);
+    ctxxx.closePath();
+    ctxxx.stroke();
+  
+    // Particles
+    for (let i = 0; i < lengthh; i++) {
+      let x = lastPoss[i] > ww ? 0 : lastPoss[i];
+      let y = hh / 5 - offsetss[i] + Math.cos(x * -0.005) * ((hh + offsetss[i]) * -0.1);
+  
+      const dx = mousee.x - x;
+      const dy = mousee.y - y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      const forceDirectionX = dx / distance;
+      const forceDirectionY = dy / distance;
+      const maxDistance = mousee.radius;
+      const force = maxDistance - distance;
+      const directionX = forceDirectionX * force;
+      const directionY = forceDirectionY * force;
+  
+      if (distance < mousee.radius) {
+        x -= directionX;
+        y -= directionY;
+      }
+      ctxxx.fillStyle = "rgba(0, 255, 255, 0.8)";
+      ctxxx.beginPath();
+      ctxxx.arc(x, y, speedss[i], 0, Math.PI * 2);
+      ctxxx.closePath();
+      ctxxx.fill();
+  
+      lastPoss[i] = x + speedss[i];
+    }
+  }
+  
+  function animatee() {
+    ctxxx.clearRect(0, 0, canvassection.width, canvassection.height);
+  
+    draww();
+  
+    requestAnimationFrame(animatee);
+    elapsedTimee++;
+  }
+  
+  animatee();
+  
+  // ANIMACIÓN TERCERA SECCIÓN 
+      const canvassection3 = document.getElementById("canvas-section-3");
+      const ctx3 = canvassection3.getContext("2d");
+      const mouse3 = { x: 0, y: 0, radius: 70 };
+      let elapsedTime3 = 0;
+      let w3 = (canvassection3.width = innerWidth);
+      let h3 = (canvassection3.height = innerHeight);
+      const length3 = 90;
+      const speeds3 = [...Array(length3)].map(() => Math.random() * (5 - 1) + 1);
+      const offsets3 = [...Array(length3)].map(() => Math.random() * length3 - length3);
+      const lastPos3 = [...Array(length3)].map(() => Math.random() * w3);
+  
+  window.addEventListener("resize", () => {
+    w3 = canvassection3.width = innerWidth;
+    h3 = canvassection3.height = innerHeight;
+  });
+  
+  canvassection3.addEventListener("mousemove", (e) => {
+    mouse3.x = e.offsetX;
+    mouse3.y = e.offsetY;
+  });
+  
+  function draw3() {
+    // Cursor
+    ctx3.lineWidth = 1;
+    ctx3.strokeStyle = "transparent";
+    ctx3.beginPath();
+    ctx3.arc(mouse3.x, mouse3.y, mouse3.radius / 2, 0, Math.PI * 2);
+    ctx3.closePath();
+    ctx3.stroke();
+  
+    // Particles
+    for (let i = 0; i < length3; i++) {
+      let x = lastPos3[i] > w3 ? 0 : lastPos3[i];
+      let y = h3 / 5 - offsets3[i] + Math.cos(x * -0.0015) * ((h3 + offsets3[i]) * -0.2);
+  
+      const dx = mouse3.x - x;
+      const dy = mouse3.y - y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      const forceDirectionX = dx / distance;
+      const forceDirectionY = dy / distance;
+      const maxDistance = mouse3.radius;
+      const force = maxDistance - distance;
+      const directionX = forceDirectionX * force;
+      const directionY = forceDirectionY * force;
+  
+      if (distance < mouse3.radius) {
+        x -= directionX;
+        y -= directionY;
+      }
+      ctx3.fillStyle = "rgba(0, 255, 255, 0.8)";
+      ctx3.beginPath();
+      ctx3.arc(x, y, speeds3[i], 0, Math.PI * 2);
+      ctx3.closePath();
+      ctx3.fill();
+  
+      lastPos3[i] = x + speeds3[i];
+    }
+  }
+  
+  function animate3() {
+    ctx3.clearRect(0, 0, canvassection3.width, canvassection3.height);
+  
+    draw3();
+  
+    requestAnimationFrame(animate3);
+    elapsedTime3++;
+  }
+  
+  animate3();
+  
+    //Cerrar video con el modal casos de éxito
+    $("#myModal").on('hidden.bs.modal', function (e) {
+        $("#myModal iframe").attr("src", $("#myModal iframe").attr("src"));
+    });
+
+    $("#myModal2").on('hidden.bs.modal', function (e) {
+        $("#myModal2 iframe").attr("src", $("#myModal2 iframe").attr("src"));
+    });
+    $("#myModal3").on('hidden.bs.modal', function (e) {
+        $("#myModal3 iframe").attr("src", $("#myModal3 iframe").attr("src"));
+    });
+    $("#myModal4").on('hidden.bs.modal', function (e) {
+        $("#myModal4 iframe").attr("src", $("#myModal4 iframe").attr("src"));
+    });
+    $("#myModal5").on('hidden.bs.modal', function (e) {
+        $("#myModal5 iframe").attr("src", $("#myModal5 iframe").attr("src"));
+    });
+    $("#myModal6").on('hidden.bs.modal', function (e) {
+        $("#myModal6 iframe").attr("src", $("#myModal6 iframe").attr("src"));
+    });
+    </script>
+</body>
+</html>
