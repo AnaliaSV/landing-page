@@ -25,387 +25,72 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-        <style>
-          /********* GENERAL*********/
-@font-face {
-    font-family: "Pulso-Regular";
-    src: url(./fonts/Pulso-Regular.otf);
-}
-@font-face {
-    font-family: "Pulso-Light";
-    src: url(./fonts/Pulso-Light.otf);
-}
-body{
-    position: relative;
-    color: white;
-    height: 100vh;
-    font-family: "Pulso-Light";
-    font-size: 1rem !important;
-}
-#pageLandingDinamic section{
-  padding: 0;
-}
-
-.cursor-pointer{
-    cursor: pointer;
-}
-section{
-  scroll-snap-align: start;
-}
-.carousel-inner{
-  padding-top: 70px;
-}
-.padding-top-carousel-off{
-  padding-top: 0;
-}
-/*fuente*/
-#pageLandingDinamic{
-    background-color: #251958 !important;
-    background: linear-gradient(to right, #090325,20%, #251958);
-}
-
-p, label {
-    color: white;
-    font-family: "Pulso-Light",Arial, Helvetica, sans-serif;
-    font-size: 16px;
-}
-
-.color-black{
-    color: black;
-}
-
-.font-roboto{
-    font-family: 'Roboto', sans-serif;
-}
-
-.roboto-wdt-300-light{
-    font-weight: 300;
-}
-
-h1,h2,h3,h4,h5,h6 {
-    color: white !important;
-    font-family: "Pulso-Regular", Arial, Helvetica, sans-serif !important;
-}
-h3{
-    font-size: 38px;   
-}
-@media (max-width: 991.98px) { 
-    h3{
-        font-size: 35px !important;
-    }
- }
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) { 
-    h3{
-        font-size: 30px !important;
-    }
- }
-
-h2{
- font-size: 85px;
-}
-/* Medium devices (tablets, less than 992px)*/
-@media (max-width: 767.98px) { 
-    h2{
-        font-size: 60px;
-    }
-}
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) { 
-    h2{
-        font-size: 40px;
-    }
- }
-
-
- .text-acento{
-    color: #b989fa !important;
-    font-size: 22px !important;
- }
-
- /* Medium devices (tablets, less than 992px)*/
-@media (max-width: 767.98px) { 
-    .text-acento.acento-col-4-1{
-    font-size: 18px !important;
-}
-}
-
-.font-light{
-    font-family:"Pulso-Light", Arial light;
-}
-
-/*Margenes padding */
-.pt-pb-7{
-    padding-top:7.5rem;
-    padding-bottom: 7.5rem;
-}
-.pt-pb-9{
-    padding-top: 9rem;
-    padding-bottom: 9rem;
-}
-.pt-pb-5{
-    padding-top: 5rem;
-    padding-top: 5rem;
-}
-
-/* COLORES: fondo */
-.bgc-purpura{
-    background-color: #251958 !important;
-    background: linear-gradient(to right, #090325,20%, #251958);
-}
-.color-acento{
-    color: #b989fa;
-}
-
-/* fondo animado */
-canvas {
-	position: absolute;
-	height: 100vh;
-	width: 100%;
-    top:0;
-	left: 0;
-    z-index:1000; 
-}
-
-
-/* z-index  */
-.z-index-1000{
-    z-index: 1000;
-}
-
-.z-index-1001{
-    z-index: 1001;
-}
-
-.z-index-1002{
-    z-index: 1002;
-}
-
-.z-index-1003{
-    z-index: 1003;
-}
-
-.z-index-1004{
-    z-index: 1004;
-}
-
-
-/* Position */
-.p-relative{
-    position: relative;
-}
-.p-absolute{
-    position: absolute;
-}
-
-/*menu flotante*/
-.menu-flotante{
-    position: fixed;
-    right: 0;
-    top: 96px;
-    text-align:right;
-    font-family:"Pulso-Light";
-    line-height: 15px !important;
-    font-size: 15px !important;
-    padding: 10px;
-}
-
-.menu-flotante-img .img-hidden {
-    display: inline;
-}
-    
-.menu-flotante-img:hover .img-hidden {
-    display: none;
-}
-    
-.menu-flotante-img .img-hidden-hover {
-    display: none;
-}
-    
-.menu-flotante-img:hover  .img-hidden-hover{
-    display: inline;
-}    
-
-.menu-flotante-img .img-hidden-hover {
-    display: none;
-}
-
-.menu-flotante-img.active .img-hidden-hover {
-    display: inline;
-}
-
-.menu-flotante-img.active .img-hidden {
-    display: none;
-}
-
-.menu-flotante a{
-    color: white;
-    opacity: 60%;
-    width:230px !important ;
-}
- 
-.menu-flotante .list-group-item{
-    background-color: transparent;
-    border: transparent;
-    padding: 0 1.5rem;
-}
-.menu-flotante .list-group-item .img-size{
-    width: 11px !important;
-}
-
-.menu-flotante .list-group-item .img-size.pb-04{
-    padding-bottom: .4rem !important;
-}
-
-.list-group-item.active{
-    background-color: transparent;
-    color: white;
-    opacity: 100%;
-}
-
-.list-group-item-action:focus, .list-group-item-action:hover{
-    background-color: transparent;
-    color: white;
-    opacity: 100%;
-}
-
-.pb-02{
-    padding-bottom: .2rem !important;
-}
-
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 991.98px) { 
-    .menu-flotante{
-        display: none;
-    }
- }
-
-/* botones card */
-.btn-design{
-    border: 1px solid #b989fa;
-    color: #b989fa;
-    padding:7px 25px;
-    font-size: 15px !important;
-}
-.btn-design:hover{
-    color:white;
-    border: 1px solid white;
-}    
-
-.contenedor-scroll{
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-}
-
-/********* SECCION 1 *********/
-.seccion-1{
-    position: relative;
-}
-
-.height-responsive{
-    display:flex !important;
-    height: 100vh;
-}
-.height-responsive img {
-    object-fit: cover;
-} 
-
-
-/********* SECCION 2 *********/
-
-.seccion-2{
-    position: relative !important;
-}
-.seccion-text-center{
-    top: 50%;
-}
-
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) { 
-    .section-2-margin{
-        margin-left:10px;
-    } 
-    
- }
-
-/********* SECCION 3*********/
-/* Carousel*/
-.seccion-3{
-    position: relative;
-}
-.carousel-caption-static{
-    position:static;
-    text-align: center;
-}
-.width-850{
-    max-width: 850px;
-    margin: auto;
-    padding: 1rem;
-}
-.padding-text{
-    padding-top:0 !important;
-    margin-top:-48px !important;
-}
-
-.image-seccion3-hover:hover{
-    opacity: 0.8;
-}
-/* Modales */
-@media (min-width: 1200px){
-.modal-xl {
-    max-width: 800px;
-    margin:auto ;
-}
-}
-
-/********* SECCION 4 *********/
-/* Contacto*/
-div a.ui-link {
-    font-size: 30px;
-    color: white!important;
-}
-
-.items-ul{
-list-style: none;
-}
-.seccion-4{
-    position: relative;
-}
-
-        </style>
+        crossorigin="anonymous">
+      </script>
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div data-spy="scroll" data-target="#list-example" class="bgc-purpura" id="pageLandingDinamic">     
     <div id="list-example" class="list-group menu-flotante z-index-1003">
+      <a class="list-group-item list-group-item-action text-right menu-flotante-img" href="#list-item-0" style="display: none;">Logo telecom
+        <img class="pb-02 img-hidden-hover" src="imagenes/web-_menu-flotante-icon-1-hover.png" alt="imagen menu flotante">
+        <img class="pb-02 img-hidden" src="imagenes/web-_menu-flotante-icon-1.png" alt=" imagen menu flotante">
+      </a>  
       <a class="list-group-item list-group-item-action text-right menu-flotante-img" href="#list-item-1" style="display: none;">Bienvenida
-        <img class="pb-02 img-hidden-hover" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-1-hover" alt="imagen menu flotante">
-        <img class="pb-02 img-hidden" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-1" alt=" imagen menu flotante">
+        <img class="pb-02 img-hidden-hover" src="imagenes/web-_menu-flotante-icon-1-hover.png" alt="imagen menu flotante">
+        <img class="pb-02 img-hidden" src="imagenes/web-_menu-flotante-icon-1.png" alt=" imagen menu flotante">
       </a>  
       <a class="list-group-item list-group-item-action text-right menu-flotante-img" href="#list-item-2">Nosotros 
-        <img class="pb-02  img-hidden-hover" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-2-hover" alt=""> 
-        <img class="pb-02 img-hidden" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-2" alt="imagen menu flotante">
+        <img class="pb-02  img-hidden-hover" src="imagenes/web-_menu-flotante-icon-1-hover.png" alt=""> 
+        <img class="pb-02 img-hidden" src="imagenes/web-_menu-flotante-icon-1.png" alt="imagen menu flotante">
       </a>
       <a class="list-group-item list-group-item-action text-right menu-flotante-img" href="#list-item-3">Soluciones Tecnológicas 
-        <img class="pb-02  img-hidden-hover" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-2-hover" alt=""> 
-        <img class="pb-02 img-hidden" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-2" alt="imagen menu flotante"></a>
+        <img class="pb-02  img-hidden-hover" src="imagenes/web-_menu-flotante-icon-2-hover.png" alt=""> 
+        <img class="pb-02 img-hidden" src="imagenes/web-_menu-flotante-icon-2.png" alt="imagen menu flotante">
+      </a>
       <a class="list-group-item list-group-item-action text-right menu-flotante-img" href="#list-item-4">Casos de Éxito 
-        <img class="pb-02 img-hidden-hover" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-2-hover" alt="hover imagen menu flotante"> 
-        <img class="pb-02 img-hidden" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-2" alt=""></a>
+        <img class="pb-02 img-hidden-hover" src="imagenes/web-_menu-flotante-icon-2-hover.png" alt="hover imagen menu flotante"> 
+        <img class="pb-02 img-hidden" src="imagenes/web-_menu-flotante-icon-2.png" alt="">
+      </a>
       <a class="list-group-item list-group-item-action text-right menu-flotante-img" href="#list-item-5">Contacto 
-        <img class="pb-02  img-hidden-hover" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-3-hover" alt=" imagen menu flotante"> 
-        <img class="pb-02 img-hidden" src="https://www.telecom.com.ar/files/land_inst_web-_menu-flotante-icon-3" alt="imagen menu flotante"></a>
+        <img class="pb-02  img-hidden-hover" src="imagenes/web-_menu-flotante-icon-3-hover.png" alt=" imagen menu flotante"> 
+        <img class="pb-02 img-hidden" src="imagenes/web-_menu-flotante-icon-3.png" alt="imagen menu flotante">
+      </a>
     </div>
     <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example contenedor-scroll">
+      <section id="list-item-0" class="seccion-1">
+      <canvas id="particles-0" class="z-index-1000"  height="2000"></canvas>
+        <!-- <div>
+          <div class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner padding-top-carousel-off">
+              <div class="carousel-item active height-responsive">
+                <video autoplay loop  muted src="videos/logo-telecom.mp4" class="d-block w-100 " style="object-fit: cover;" alt="...">
+                <div class="carousel-caption d-md-block seccion-text-center">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div>
+          <div class="carousel slide" data-ride="carousel" style="background-color: #190042 !important;">
+            <div class="carousel-inner padding-top-carousel-off">
+              <div class="carousel-item active height-responsive">
+                <div style=" max-width:745px; margin: auto;background-color: #190042 !important; ">
+                   <img  src="imagenes/logo-telecom_1.gif" class="d-block w-100" style="padding:10px;">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>  
       <section id="list-item-1" class="seccion-1">
         <canvas id="particles" class="z-index-1000"  height="2000"></canvas>
         <div>
           <div class="carousel slide" data-ride="carousel">
             <div class="carousel-inner padding-top-carousel-off">
               <div class="carousel-item active height-responsive">
-                <img src="https://www.telecom.com.ar/files/land_inst_section-1-muchacho-notebook" class="d-block w-100" alt="...">
+                <img src="imagenes/section-1-muchacho-notebook.png" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-md-block seccion-text-center">
                   <h2>Tecnología <span class="font-light">que se vive<span></h2>
                 </div>
@@ -416,7 +101,8 @@ list-style: none;
       </section>
       <section id="list-item-2" class="seccion-1">
         <div style="position: absolute; left: 0; right: 0;">
-             <div class="height-responsive"> 
+            <div class="height-responsive"> 
+              <!-- <iframe width="100vw" height="100vh" src="https://www.youtube.com/embed/ZmP4_02KC3g?autoplay=1&mute=1&loop=1&rel=0&showinfo=0&playlist=ZmP4_02KC3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100vw; object-fit: cover; height:100vh;"></iframe> -->
               <video autoplay loop  muted src="./videos/manifiesto.mp4" class="d-block" alt="video manifiesto" style="width: 100%; object-fit: cover;">
             </div>
         </div>
@@ -456,13 +142,13 @@ list-style: none;
             </div>
             <a class="carousel-control-prev z-index-1001" href="#carouselsection-1" role="button" data-slide="prev">
               <span aria-hidden="true">
-                <img src="https://www.telecom.com.ar/files/land_inst_arrow-_left" alt=" arrow left">
+                <img src="imagenes/arrow-_left.png" alt=" arrow left">
               </span>
               <span class="sr-only">Previous</span>
             </a>
             <a class="carousel-control-next z-index-1001" href="#carouselsection-1" role="button" data-slide="next">
               <span  aria-hidden="true">
-                <img src="https://www.telecom.com.ar/files/land_inst_arrow-_right" alt="arrow right">
+                <img src="imagenes/arrow-_right.png" alt="arrow right">
               </span>
               <span class="sr-only">Next</span>
             </a>
@@ -471,14 +157,14 @@ list-style: none;
       <section id="list-item-3" class="seccion-2">
         <div class="container">
               <div style="position: sticky; top:0; " >
-                <img src="https://www.telecom.com.ar/files/land_inst_semicirculo" alt="" class="img-fluid">
+                <img src="imagenes/land_inst_semicirculo.png" alt="" class="img-fluid">
               </div>
                 <div class="row align-items-center pt-pb-9">
                     <div class="col-md-6 col-lg-6 offset-lg-1 order-md-2">
-                      <video src="./videos/cloud e-commerce.mp4" controls class="img-fluid z-index-1002 p-relative" alt="">
+                      <iframe width="100%" height="303" src="https://www.youtube.com/embed/sfYAeBK2Os0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="z-index-1002 p-relative" ></iframe>
                     </div> 
                     <div class="col-md-6 col-lg-4 offset-lg-1 order-md-1">
-                      <h3 class="mb-4 mt-4 section-2-margin">Cloud & Datacenter</h3>
+                      <h3 class="mb-4 section-2-margin">Cloud & Datacenter</h3>
                       <p class="card-text text-acento acento-col-4-1 font-light section-2-margin">Tecnología pensada para que no pierdas nada si volcás el café sobre el teclado.</p>
                       <p class="card-text section-2-margin seccion-2-text">Soluciones de nube pública, privada, híbrida y datacenter.</p>
                       <a href="https://www.telecom.com.ar/cloud" target="_blank"><button type="button" class="section-2-margin btn btn-design z-index-1002 p-relative"> Conocé más</button></a>
@@ -487,10 +173,10 @@ list-style: none;
                 <div class="row align-items-center pt-pb-9">
                   <canvas id="canvas-section-2" class="z-index-1000"></canvas>
                     <div class="col-md-6 col-lg-6 offset-lg-1">
-                      <video src="./videos/ciberseguridad.mp4" controls class="img-fluid z-index-1002 p-relative" alt="">
+                      <iframe width="100%" height="303" src="https://www.youtube.com/embed/EW7FRw6bTMQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class=" z-index-1002 p-relative"></iframe>
                     </div> 
                     <div class="col-md-6 col-lg-4 offset-lg-1 p-">
-                      <h3 class="mb-4 mt-4 section-2-margin">Ciberseguridad</h3>
+                      <h3 class="mb-4 section-2-margin">Ciberseguridad</h3>
                       <p class=" section-2-margin card-text text-acento acento-col-4-1 font-light">Tecnología pensada por si hay que prestar la laptop laboral para hacer la tarea del colegio.</p>
                       <p class=" section-2-margin card-text seccion-2-text">Soluciones que protegen tus datos para tranquilidad tu empresa.</p>
                       <a href="https://www.telecom.com.ar/ciberseguridad" target="_blank"><button type="button" class="section-2-margin btn btn-design z-index-1002 p-relative">Conocé más</button></a> 
@@ -498,10 +184,10 @@ list-style: none;
                 </div>
                 <div class="row align-items-center pt-pb-9">
                     <div class="col-md-6 col-lg-6 offset-lg-1 order-md-2">
-                        <video controls src="./videos/IOT.mp4" class="img-fluid z-index-1002 p-relative" alt="">
+                      <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ksf2UIAn_3Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="z-index-1002 p-relative"></iframe>
                         </div> 
                     <div class="col-md-6 col-lg-4 offset-lg-1 order-md-1">
-                        <h3 class="mb-4 mt-4 section-2-margin">IoT</h3>
+                        <h3 class="mb-4 section-2-margin">IoT</h3>
                             <p class="card-text text-acento acento-col-4-1 font-light section-2-margin ">Tecnología pensada para los que sienten a cada producto como un hijo y necesitan saber qué le pasa en cada momento.</p>
                             <p class="card-text section-2-margin seccion-2-text">Soluciones para optimizar los datos, potenciar y hacer más con tu negocio. .</p>
                           <a href="https://www.telecom.com.ar/iot" target="_blank"><button type="button" class="btn btn-design z-index-1002 p-relative section-2-margin">Conocé más</button></a>   
@@ -509,7 +195,7 @@ list-style: none;
                 </div> 
                 <div class="row align-items-center pt-pb-9">
                     <div class="col-md-6 col-lg-6 offset-lg-1">
-                        <video controls src="./videos/conectividad.mp4" class="img-fluid z-index-1002 p-relative" alt="">
+                      <iframe width="100%" height="303" src="https://www.youtube.com/embed/R8VM3fjqqYU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                       </div> 
                       <div class="col-md-6 col-lg-4 offset-lg-1">
                         <h3 class="mb-4 mt-4 section-2-margin">Conectividad</h3>
@@ -542,7 +228,7 @@ list-style: none;
                         <p class="font-roboto roboto-wdt-300-light z-index-1002 p-relative d-inline">Afianzando nuestras relaciones como partner estratégicos, Megatlon, el mayor referente de la actividad física en Argentina, eligió a Telecom para instalar en sus sedes la nueva solución de seguridad de Control de Acceso a través de reconocimiento facial. </p> <div class="z-index-1002 p-relative d-inline color-acento cursor-pointer" data-toggle="modal" data-target=".bd-megatlon-modal-xl">(Ver más)</div>
                     </div>
                     <div class="p-relative m-auto w-100">
-                    <img  src="https://www.telecom.com.ar/files/land_inst_megatlon-img-seccion-3" class="img-fluid d-block m-auto z-index-1002 p-relative cursor-pointer image-seccion3-hover" alt="banner caso Megatlon" data-toggle="modal" data-target=".bd-megatlon-modal-xl">
+                       <img src="imagenes/megatlon-img-seccion-3.png" class="img-fluid d-block m-auto z-index-1002 p-relative cursor-pointer image-seccion3-hover" alt="banner caso Megatlon" data-toggle="modal" data-target=".bd-megatlon-modal-xl">
                   </div>
                 </div>
               <!-- Empieza el modal -->
@@ -569,7 +255,7 @@ list-style: none;
                   <p class="font-roboto roboto-wdt-300-light z-index-1002 p-relative d-inline">En Telecom seguimos trabajando para potenciar empresas, por eso agradecemos a Calipso ERP de Grupo Visma por confiar en nosotros como su partner tecnológico, adquiriendo el servicio de Huawei Cloud, una nube inteligente para empresas. Estamos...</p> <div class="z-index-1002 p-relative d-inline color-acento cursor-pointer" data-toggle="modal" data-target=".bd-calipso-modal-xl">(Ver más)</div>                                
                 </div>
                 <div>
-                  <img src="https://www.telecom.com.ar/files/land_inst_calipso-img-seccion-3" class="img-fluid d-block m-auto z-index-1002 p-relative cursor-pointer image-seccion3-hover" alt="..." data-toggle="modal" data-target=".bd-calipso-modal-xl">
+                  <img src="imagenes/calipso-img-seccion-3.png" class="img-fluid d-block m-auto z-index-1002 p-relative cursor-pointer image-seccion3-hover" alt="..." data-toggle="modal" data-target=".bd-calipso-modal-xl">
                 </div>
               </div>
               <!-- Empieza el modal -->
@@ -596,7 +282,7 @@ list-style: none;
                   <p class="font-roboto roboto-wdt-300-light z-index-1002 p-relative d-inline">Agradecemos a Frávega por elegirnos para ayudarlos en el crecimiento de su canal de ventas digital para seguir siendo uno de los Marketplace referentes del mercado. Para ello, a partir de la alianza entre Telecom y Amazon Web Service, adquirió la...</p>
                   <div class="z-index-1002 p-relative d-inline-block color-acento cursor-pointer mb-1" data-toggle="modal" data-target=".bd-fravega-modal-xl">(Ver más)</div>
                 </div>                
-                <img src="https://www.telecom.com.ar/files/land_inst_fravega-img-seccion-3" class="img-fluid d-block m-auto z-index-1002 p-relative cursor-pointer image-seccion3-hover" alt="..." data-toggle="modal" data-target=".bd-fravega-modal-xl">
+                <img src="imagenes/fravega-img-seccion-3.png" class="img-fluid d-block m-auto z-index-1002 p-relative cursor-pointer image-seccion3-hover" alt="..." data-toggle="modal" data-target=".bd-fravega-modal-xl">
               </div>
               <!-- Empieza el modal -->
               <div id="myModal3" class="modal fade bd-fravega-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
@@ -623,7 +309,7 @@ list-style: none;
                   <div class="z-index-1002 p-relative d-inline color-acento cursor-pointer" data-toggle="modal" data-target=".bd-cafe-martinez-modal-xl">(Ver más)</div>
                 </div>
                 <div style="margin:auto; width: 100%;">
-                  <img src="https://www.telecom.com.ar/files/land_inst_cafe-martinez-img-seccion-3" class="img-fluid d-block m-auto z-index-1002 p-relative cursor-pointer image-seccion3-hover" alt="..." data-toggle="modal" data-target=".bd-cafe-martinez-modal-xl">
+                  <img src="imagenes/cafe-martinez-img-seccion-3.png" class="img-fluid d-block m-auto z-index-1002 p-relative cursor-pointer image-seccion3-hover" alt="..." data-toggle="modal" data-target=".bd-cafe-martinez-modal-xl">
                 </div>  
               </div>
               <!-- Empieza el modal -->
@@ -649,7 +335,7 @@ list-style: none;
                   <h3 class="mb-4">Caso de éxito <span class="font-light">Ecosan S.A.</span></h3>
                   <p class="font-roboto roboto-wdt-300-light z-index-1002 p-relative d-inline">Ecosan S.A nos eligió como su partner tecnológico para potenciar y acelerar el proceso de transformación digital de su negocio. Con la solución de Monitoreo de Activos, mediante dispositivos y sensores de variables críticas, pueden controlar el correcto...</p><div class="z-index-1002 p-relative d-inline color-acento cursor-pointer" data-toggle="modal" data-target=".bd-ecosan-modal-xl">(Ver más)</div>
                 </div>
-                <img src="https://www.telecom.com.ar/files/land_inst_ecosan-img-seccion-3" class="img-fluid d-block m-auto z-index-1002 p-relative cursor-pointer image-seccion3-hover"  data-toggle="modal" data-target=".bd-ecosan-modal-xl" alt="...">
+                <img src="imagenes/ecosan-img-seccion-3.png" class="img-fluid d-block m-auto z-index-1002 p-relative cursor-pointer image-seccion3-hover"  data-toggle="modal" data-target=".bd-ecosan-modal-xl" alt="...">
               </div>
               <!-- Empieza el modal -->
               <div id="myModal5" class="modal fade bd-ecosan-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
@@ -675,7 +361,7 @@ list-style: none;
                   <p class="font-roboto roboto-wdt-300-light z-index-1002 p-relative d-inline">Para nosotros es un orgullo estar presentes y potenciar uno de los eventos más importantes del mundo. Es por esto que agradecemos a GGTech Entertaiment por confiar en nosotros y permitirnos ser parte del festival Gamergy en Buenos Aires, uno de los más...</p>
                   <div class="z-index-1002 p-relative d-inline color-acento cursor-pointer" data-toggle="modal" data-target=".bd-gamergy-modal-xl">(Ver más)</div>
                 </div>
-                <img src="https://www.telecom.com.ar/files/land_inst_gamergy-img-seccion-3" class="img-fluid d-block m-auto z-index-1002 p-relative cursor-pointer image-seccion3-hover" data-toggle="modal" data-target=".bd-gamergy-modal-xl" alt="...">
+                <img src="imagenes/gamergy-img-seccion-3.png" class="img-fluid d-block m-auto z-index-1002 p-relative cursor-pointer image-seccion3-hover" data-toggle="modal" data-target=".bd-gamergy-modal-xl" alt="...">
               </div>
               <!-- Empieza el modal -->
               <div id="myModal6" class="modal fade bd-gamergy-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
@@ -698,13 +384,13 @@ list-style: none;
             </div>
             <a class="carousel-control-prev z-index-1002" href="#carouselExampleCaptions" role="button" data-slide="prev">
               <span  aria-hidden="true">
-                <img src="https://www.telecom.com.ar/files/land_inst_arrow-_left" alt="">
+                <img src="imagenes/arrow-_left.png" alt="">
               </span>
               <span class="sr-only">Previous</span>
             </a>
             <a class="carousel-control-next z-index-1002" href="#carouselExampleCaptions" role="button" data-slide="next">
               <span  aria-hidden="true">
-                <img src="https://www.telecom.com.ar/files/land_inst_arrow-_right" alt="">
+                <img src="imagenes/arrow-_right.png" alt="">
               </span>
               <span class="sr-only">Next</span>
             </a>
@@ -735,7 +421,7 @@ list-style: none;
                             <p class="text-center mb-1"> <b class="color-acento">Twitter</b><br>
                             @telecomempresas</p>
                         </div>                      -->
-                        <div  class="m-1 text-center">
+                        <div class="m-1 text-center">
                             <a class="ui-link">
                               <i class="fas fa-comments blue"></i>
                             </a><br>
@@ -771,10 +457,10 @@ list-style: none;
                     <label for="number">Teléfono*</label>
                     <input type="number" class="form-control" id="number" placeholder="1120000000">
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label for="file">Adjuntar archivo (Máx. 2MB)*</label>
                     <input type="file" class="form-control-file" id="file">
-                  </div>
+                  </div> -->
                   <div class="form-group">
                     <label for="Textarea1">Comentario*</label>
                     <textarea class="form-control" id="Textarea1" rows="3"></textarea>
@@ -1088,6 +774,78 @@ list-style: none;
     $("#myModal6").on('hidden.bs.modal', function (e) {
         $("#myModal6 iframe").attr("src", $("#myModal6 iframe").attr("src"));
     });
-    </script>
+
+    // ANIMACIÓN SECCIÓN logo
+    const pparticles = document.getElementById("particles-0");
+    const cctxx = pparticles.getContext("2d");
+    pparticles.width = window.innerWidth;
+    pparticles.height = window.innerHeight;
+
+    const pparticlesArray = [];
+
+    class PParticle {
+      constructor() {
+        this.x0 = Math.random() * pparticles.width;
+        this.y0 = Math.random() * pparticles.height;
+        this.ssize = Math.random() * 5 + 1;
+        this.sspeedX = Math.random() * 3 - 1.5;
+        this.sspeedY = Math.random() * 3 - 1.5;
+        this.ccolor = `rgba(0, 255, 255, 0.8)`;
+      }
+
+      uupdate() {
+        this.x0 += this.sspeedX;
+        this.y0 += this.sspeedY;
+
+        if (this.ssize > 0.2) this.ssize -= 0.1;
+        if (this.x0 < 0 || this.x > pparticles.width) this.sspeedX *= -1;
+        if (this.y0 < 0 || this.y > pparticles.height) this.sspeedY *= -1;
+      }
+
+      ddraw() {
+        cctxx.fillStyle = this.ccolor;
+        cctxx.beginPath();
+        cctxx.arc(this.x0, this.y0, this.ssize, 0, Math.PI * 2);
+        cctxx.closePath();
+        cctxx.fill();
+      }
+    }
+
+    function hhandleParticles() {
+      for (let i = 0; i < pparticlesArray.length; i++) {
+        pparticlesArray[i].uupdate();
+        pparticlesArray[i].ddraw();
+
+        if (pparticlesArray[i].ssize <= 0.2) {
+          pparticlesArray.splice(i, 1);
+          i--;
+        }
+      }
+    }
+
+    function ccreateParticles() {
+      if (pparticlesArray.length < 100) {
+        pparticlesArray.push(new PParticle());
+      }
+    }
+
+    function aanimateParticles() {
+      cctxx.clearRect(0, 0, pparticles.width, pparticles.height);
+      hhandleParticles();
+      ccreateParticles();
+      requestAnimationFrame(aanimateParticles);
+    }
+
+    aanimateParticles();
+
+    window.addEventListener("resize", () => {
+      pparticles.width = window.innerWidth;
+      pparticles.height = window.innerHeight;
+    });
+
+
+
+
+  </script>
 </body>
 </html>
