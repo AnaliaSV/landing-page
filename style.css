@@ -359,3 +359,6 @@
             position: relative;
         }
         
+        .pt-10{
+            padding-top: 10rem !important;
+        }
