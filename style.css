@@ -337,15 +337,29 @@
         .image-seccion3-hover:hover{
             opacity: 0.8;
         }
+                
+        .mb-10{
+            margin-bottom: 10rem !important;
+        }
+
+        @media (max-width: 991.98px) { 
+            .mb-10{
+                padding-bottom: 20rem !important;}
+                    
+             }
+
         /* Modales */
         @media (min-width: 1200px){
-        .modal-xl {
-            max-width: 800px;
-            margin:auto ;
-        }
+            .modal-xl {
+                max-width: 800px;
+                margin:auto ;
+            }
         }
         
         /********* SECCION 4 *********/
+
+  
+
         /* Contacto*/
         div a.ui-link {
             font-size: 30px;
@@ -357,8 +371,4 @@
         }
         .seccion-4{
             position: relative;
-        }
-        
-        .pt-10{
-            padding-top: 10rem !important;
         }
